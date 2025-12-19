@@ -1,0 +1,27 @@
+dataset:
+  name: "RAVDESS"
+  path: "data/external/ravdess"
+  
+features:
+  mfcc:
+    n_mfcc: 13
+    n_fft: 2048
+    hop_length: 512
+    fmin: 0
+    fmax: 8000
+
+model:
+  type: "cnn"  # Options: "cnn", "rnn_lstm"
+  input_shape: [None, 13, 1]  # Adjust based on feature extraction output
+  num_classes: 8  # Number of emotion classes
+
+training:
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.001
+  validation_split: 0.2
+
+logging:
+  log_dir: "logs/"
+  save_model: true
+  model_save_path: "models/best_model.h5"
