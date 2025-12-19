@@ -1,0 +1,22 @@
+name: speech-emotion-recognition
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - librosa
+  - matplotlib
+  - seaborn
+  - tensorflow
+  - keras
+  - jupyter
+  - pyyaml
+  - tqdm
+  - soundfile
+  - opencv
+  - pip:
+      - audioread
+      - webrtcvad
